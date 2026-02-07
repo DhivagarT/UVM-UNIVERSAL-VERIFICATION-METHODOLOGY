@@ -1,9 +1,11 @@
-module d_ff(input clk,rst,din,output reg qout);
+module d_ff(input clk,rst,d,output reg q);
   
   always_ff@(posedge clk)begin
     if(rst)
-      qout<=1'b0;
+      q<=1'b0;
     else
-      qout<=din;
+      q<=d;
   end
+  
 endmodule
+  
